@@ -40,3 +40,9 @@ let g:lightline = { 'colorscheme': 'landscape', }
 " set colorscheme
 syntax on
 colorscheme molokai
+
+" indent using space
+set tabstop=2
+set autoindent
+set expandtab
+set shiftwidth=2
