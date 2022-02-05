@@ -1,8 +1,11 @@
-# install packages
-apt-get -y install tmux vim zsh git gawk fonts-powerline curl htop sudo
+# install HackGen fonts
+# https://github.com/yuru7/HackGen
 
-# install zplug
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+# install packages
+apt-get -y install tmux vim zsh git curl htop sudo
+
+# install Starship
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 # clone dotfiles
 git clone https://github.com/jyuch/dotfiles.git .dotfiles
