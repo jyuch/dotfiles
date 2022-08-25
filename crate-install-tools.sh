@@ -1,2 +1,2 @@
-cargo install --force starship
+cargo install --force --locked starship
 
