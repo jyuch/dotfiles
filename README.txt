@@ -14,10 +14,10 @@ ssh-keygen -t ed25519 -C "comment"
 # clone dotfiles
 git clone https://github.com/jyuch/dotfiles.git .dotfiles
 # or
-git clone git@github.com:jyuch/dotfiles.git
+git clone git@github.com:jyuch/dotfiles.git .dotfiles
 
 # copy default .gitconfig
-copy .dotfiles/gitconfig .gitconfig
+cp .dotfiles/gitconfig .gitconfig
 
 # install tools via cargo
 chmod u+x crate-install-tools.sh
