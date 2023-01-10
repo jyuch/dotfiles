@@ -5,11 +5,21 @@
 apt install tmux vim zsh git curl htop sudo
 
 # install rust env
-apt install build-essential libssl-dev pkg-config
+apt install build-essential libssl-dev pkg-config cmake
 curl https://sh.rustup.rs -sSf | sh
+
+# clone and build starship
+git clone https://github.com/starship/starship.git
+cargo build --release
 
 # create ssh-key and register to github (if needed)
 ssh-keygen -t ed25519 -C "comment"
+
+```
+Host github.com
+  IdentityFile ~/.ssh/github
+  User git
+```
 
 # clone dotfiles
 git clone https://github.com/jyuch/dotfiles.git .dotfiles
@@ -18,10 +28,6 @@ git clone git@github.com:jyuch/dotfiles.git .dotfiles
 
 # copy default .gitconfig
 cp .dotfiles/gitconfig .gitconfig
-
-# install tools via cargo
-chmod u+x crate-install-tools.sh
-./crate-install-tools.sh
 
 # crete symlink
 chmod u+x create-symlink.sh
