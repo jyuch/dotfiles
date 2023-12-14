@@ -15,6 +15,8 @@ cargo build --release
 # create ssh-key and register to github (if needed)
 ssh-keygen -t ed25519 -C "comment"
 
+# edit .ssh/config
+
 ```
 Host github.com
   IdentityFile ~/.ssh/github
